@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Solway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav">
+      <ul class="nav__link">
+        <li class="active" id="js-home">Home</li>
+        <li id="js-about">About</li>
+        <li id="js-post">Post</li>
+        <li id="js-etc">ETC</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    const navHome = document.getElementById("js-home");
+    const navAbout = document.getElementById("js-about");
+    const navPost = document.getElementById("js-post");
+    const navETC = document.getElementById("js-etc");
+
+    const homeclick = () => {
+      navHome.classList.add("active");
+      navAbout.classList.remove("active");
+      navPost.classList.remove("active");
+      navETC.classList.remove("active");
+    };
+
+    const aboutclick = () => {
+      navHome.classList.remove("active");
+      navAbout.classList.add("active");
+      navPost.classList.remove("active");
+      navETC.classList.remove("active");
+    };
+
+    const postclick = () => {
+      navHome.classList.remove("active");
+      navAbout.classList.remove("active");
+      navPost.classList.add("active");
+      navETC.classList.remove("active");
+    };
+
+    const etclick = () => {
+      navHome.classList.remove("active");
+      navAbout.classList.remove("active");
+      navPost.classList.remove("active");
+      navETC.classList.add("active");
+    };
+
+    navHome.addEventListener("click", homeclick);
+    navAbout.addEventListener("click", aboutclick);
+    navPost.addEventListener("click", postclick);
+    navETC.addEventListener("click", etclick);
+  </script>
+</html>

@@ -1,0 +1,10 @@
+@import "./reset.css";
+@import "./nav.css";
+
+body {
+  font-family: "Solway", serif;
+}
+
+* {
+  box-sizing: border-box;
+}

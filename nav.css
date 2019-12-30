@@ -1,0 +1,48 @@
+@keyframes menuHover {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menuStart {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.nav {
+  margin: 20px 40px;
+  width: 7%;
+  animation: menuStart 1s forwards;
+}
+
+.nav .nav__link {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.nav .nav__link li {
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.nav .nav__link li:hover {
+  animation: menuHover 2s forwards;
+}
+
+.nav .nav__link .active {
+  cursor: pointer;
+  font-size: 20px;
+  color: cyan;
+}
